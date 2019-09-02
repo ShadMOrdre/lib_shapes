@@ -1,0 +1,57 @@
+#Enable shapes - Enable Nodebox Shape definitions for qualifying nodes.
+#true or false
+lib_shapes_enable (Enable Nodebox Shape definitions for qualifying nodes) bool true
+
+#Enable shapes for all nodes in depended mods.  [mod] support enabled by adding modname to depends.txt
+#true or false
+lib_shapes_enable_all (Enable shapes for all nodes in depended mods) bool true
+
+#Enable default nodes.
+#true or false
+lib_shapes_enable_default_set (Enable shapes for registered "default") bool true
+
+#Enable stone nodes.
+#true or false
+lib_shapes_enable_stone_set (Enable shapes for registered "stones") bool true
+
+#Enable brick nodes
+#true or false
+lib_shapes_enable_brickset (Enable shapes for registered "brick") bool true
+
+#Enable block/tile nodes
+#true or false
+lib_shapes_enable_block_set (Enable shapes for registered "block") bool true
+
+#Enable cobble/rubble nodes
+#true or false
+lib_shapes_enable_cobble_set (Enable shapes for registered "cobble") bool true
+
+#Enable metal nodes
+#true or false
+lib_shapes_enable_metal_set (Enable shapes for registered "metal") bool true
+
+#Enable glass nodes
+#true or false
+lib_shapes_enable_glass_set (Enable shapes for registered "glass") bool true
+
+#Enable clay nodes
+#true or false
+lib_shapes_enable_clay_set (Enable shapes for registered "clay") bool true
+
+#Enable tree nodes
+#true or false
+lib_shapes_enable_tree_set (Enable shapes for registered "tree") bool true
+
+#Enable wood nodes
+#true or false
+lib_shapes_enable_wood_set (Enable shapes for registered "wood") bool true
+
+#Enable food nodes
+#true or false
+lib_shapes_enable_food_set (Enable shapes for registered "food") bool false
+
+#Enable other nodes
+#true or false
+lib_shapes_enable_other_set (Enable shapes for registered "other") bool false
+
+
