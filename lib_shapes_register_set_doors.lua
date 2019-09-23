@@ -19,7 +19,7 @@ lib_shapes.register_door_node = function(node_mat, shape)
 	local new_node_groups = {}
 
 	local shape_def = {}
-	local shape_tiles = {}
+	--local shape_tiles = {}
 	local shape_node_box = {}
 	local shape_selection_box = {}
 	local shape_open_node_box = {}
@@ -27,7 +27,7 @@ lib_shapes.register_door_node = function(node_mat, shape)
 	--local shape_collision_box = {}
 
 	shape_def = lib_shapes.registered_shapes["shape_" .. shape]
-	shape_tiles = shape_def.tiles
+	--shape_tiles = shape_def.tiles
 	shape_node_box = shape_def.node_box
 	shape_selection_box = shape_def.selection_box
 	shape_open_node_box = shape_def.open_node_box
@@ -51,34 +51,34 @@ lib_shapes.register_door_node = function(node_mat, shape)
 	
 	if node_def.tiles then
 		if node_def.tiles[1] then
-			new_node_tiles[1] = node_def.tiles[1]
+			new_node_tiles[1] = node_def.tiles[1] .. ""
 		else
-			new_node_tiles[1] = node_def.tiles
+			new_node_tiles[1] = node_def.tiles .. ""
 		end
 		if node_def.tiles[2] then
-			new_node_tiles[2] = node_def.tiles[2]
+			new_node_tiles[2] = node_def.tiles[2] .. ""
 		else
 			new_node_tiles[2] = new_node_tiles[1]
 		end
 		if node_def.tiles[3] then
 			temp_tile = node_def.tiles[3]
-			new_node_tiles[3] = "[combine:16x16:-8,0=" .. node_def.tiles[3] .. ":8,0=" .. node_def.tiles[3] .. ""
+			new_node_tiles[3] = "([combine:16x16:-8,0=" .. node_def.tiles[3] .. ":8,0=" .. node_def.tiles[3] .. ""
 		else
 			temp_tile = new_node_tiles[2]
 			new_node_tiles[3] = "[combine:16x16:-8,0=" .. new_node_tiles[2] .. ":8,0=" .. new_node_tiles[2] .. ""
 		end
 		if node_def.tiles[4] then
-			new_node_tiles[4] = "[combine:16x16:8,0=" .. node_def.tiles[4] .. ":-8,0=" .. node_def.tiles[4] .. ""
+			new_node_tiles[4] = "([combine:16x16:8,0=" .. node_def.tiles[4] .. ":-8,0=" .. node_def.tiles[4] .. ""
 		else
 			new_node_tiles[4] = new_node_tiles[3]
 		end
 		if node_def.tiles[5] then
-			new_node_tiles[5] = node_def.tiles[5]
+			new_node_tiles[5] = node_def.tiles[5] .. ""
 		else
 			new_node_tiles[5] = temp_tile
 		end
 		if node_def.tiles[6] then
-			new_node_tiles[6] = node_def.tiles[6]
+			new_node_tiles[6] = node_def.tiles[6] .. ""
 		else
 			new_node_tiles[6] = temp_tile
 		end

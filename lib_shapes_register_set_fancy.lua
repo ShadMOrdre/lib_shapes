@@ -14,13 +14,13 @@ lib_shapes.register_fancy_node = function(node_mat, shape)
 	local new_node_groups = {}		--
 
 	local shape_def = {}
-	local shape_tiles = {}
+	--local shape_tiles = {}
 	local shape_node_box = {}
 	local shape_selection_box = {}
 	local shape_collision_box = {}
 
 	shape_def = lib_shapes.registered_shapes["shape_" .. shape]
-	shape_tiles = shape_def.tiles
+	--shape_tiles = shape_def.tiles
 	shape_node_box = shape_def.node_box
 	shape_selection_box = shape_def.selection_box
 	shape_collision_box = shape_def.collision_box
@@ -31,7 +31,7 @@ lib_shapes.register_fancy_node = function(node_mat, shape)
 	new_node_name = node_mod .. ":" .. node_name .. "_" .. shape
 
 	new_node_groups = node_def.groups
-	--new_node_groups.not_in_creative_inventory = 1
+	new_node_groups.not_in_creative_inventory = 1
 	new_node_groups.lib_shaped_node = 3
 	
 	if node_def.tiles then

@@ -76,6 +76,77 @@ local S = lib_shapes.intllib
 lib_shapes.register_shape("fence", {
 	description = "Fence", 
 	shape_type = "connected",
+	tiles = {
+
+		"(overlay_fence_top_post.png^(wall_texture^[transformR90)^overlay_fence_top_post.png^[makealpha:255,126,126)^(overlay_fence_top_rail.png^wall_texture^overlay_fence_top_rail.png^[makealpha:255,126,126)",
+
+		"(overlay_fence_top_post.png^(wall_texture^[transformR90)^overlay_fence_top_post.png^[makealpha:255,126,126)^(overlay_fence_top_rail.png^wall_texture^overlay_fence_top_rail.png^[makealpha:255,126,126)",
+
+		"(overlay_fence_side_post.png^(wall_texture^[transformR90)^overlay_fence_side_post.png^[makealpha:255,126,126)^(overlay_fence_side_rail.png^wall_texture^overlay_fence_side_rail.png^[makealpha:255,126,126)",
+
+		"(overlay_fence_side_post.png^(wall_texture^[transformR90)^overlay_fence_side_post.png^[makealpha:255,126,126)^(overlay_fence_side_rail.png^wall_texture^overlay_fence_side_rail.png^[makealpha:255,126,126)",
+
+		"(overlay_fence_side_post.png^(wall_texture^[transformR90)^overlay_fence_side_post.png^[makealpha:255,126,126)^(overlay_fence_side_rail.png^wall_texture^overlay_fence_side_rail.png^[makealpha:255,126,126)",
+
+		"(overlay_fence_side_post.png^(wall_texture^[transformR90)^overlay_fence_side_post.png^[makealpha:255,126,126)^(overlay_fence_side_rail.png^wall_texture^overlay_fence_side_rail.png^[makealpha:255,126,126)",
+
+	},
+	node_box = {
+		type = "connected",
+		fixed = {
+			{-0.125, -0.5, -0.125, 0.125, 0.5, 0.125},
+		},
+		connect_front = {
+			{-0.0625, 0.1875, -0.5, 0.0625, 0.4375, -0.125}, -- Top
+			{-0.0625, -0.3125, -0.5, 0.0625, -0.125, -0.125}, -- Bottom
+		},
+		connect_back = {
+			{-0.0625, 0.1875, 0.125, 0.0625, 0.4375, 0.5}, -- Top
+			{-0.0625, -0.3125, 0.125, 0.0625, -0.125, 0.5}, -- Bottom
+		},
+		connect_left = {
+			{-0.5, 0.1875, -0.0625, -0.125, 0.4375, 0.0625}, -- Top
+			{-0.5, -0.3125, -0.0625, -0.125, -0.125, 0.0625}, -- Bottom
+		},
+		connect_right = {
+			{0.125, 0.1875, -0.0625, 0.5, 0.4375, 0.0625}, -- Top
+			{0.125, -0.3125, -0.0625, 0.5, -0.125, 0.0625}, -- Bottom
+		},
+	},
+	selection_box = {
+		type = "fixed",
+		fixed = {
+			{-0.125, -0.5, -0.125, 0.125, 0.5, 0.125},
+		},
+	},
+	collision_box = {
+		type = "fixed",
+		fixed = {
+			{ -0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+		},
+	},
+})
+
+
+lib_shapes.register_shape("fence_stone_cobble_post", {
+	description = "Fence with Cobblestone Post", 
+	shape_type = "connected",
+	tiles = {
+
+		"(overlay_fence_top_post.png^lib_materials_stone_cobble_default.png^overlay_fence_top_post.png^[makealpha:255,126,126)^(overlay_fence_top_rail.png^wall_texture^overlay_fence_top_rail.png^[makealpha:255,126,126)",
+
+		"(overlay_fence_top_post.png^lib_materials_stone_cobble_default.png^overlay_fence_top_post.png^[makealpha:255,126,126)^(overlay_fence_top_rail.png^wall_texture^overlay_fence_top_rail.png^[makealpha:255,126,126)",
+
+		"(overlay_fence_side_post.png^lib_materials_stone_cobble_default.png^overlay_fence_side_post.png^[makealpha:255,126,126)^(overlay_fence_side_rail.png^wall_texture^overlay_fence_side_rail.png^[makealpha:255,126,126)",
+
+		"(overlay_fence_side_post.png^lib_materials_stone_cobble_default.png^overlay_fence_side_post.png^[makealpha:255,126,126)^(overlay_fence_side_rail.png^wall_texture^overlay_fence_side_rail.png^[makealpha:255,126,126)",
+
+		"(overlay_fence_side_post.png^lib_materials_stone_cobble_default.png^overlay_fence_side_post.png^[makealpha:255,126,126)^(overlay_fence_side_rail.png^wall_texture^overlay_fence_side_rail.png^[makealpha:255,126,126)",
+
+		"(overlay_fence_side_post.png^lib_materials_stone_cobble_default.png^overlay_fence_side_post.png^[makealpha:255,126,126)^(overlay_fence_side_rail.png^wall_texture^overlay_fence_side_rail.png^[makealpha:255,126,126)",
+
+	},
+
 	node_box = {
 		type = "connected",
 		fixed = {

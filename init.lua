@@ -192,6 +192,7 @@ minetest.log(S("[MOD] lib_shapes:  Loading..."))
 	dofile(lib_shapes.path_mod .. "/lib_shapes_register_set_doors.lua")
 
 	dofile(lib_shapes.path_mod.."/lib_shapes_set_fences.lua")
+	dofile(lib_shapes.path_mod.."/lib_shapes_register_set_fence.lua")
 
 	dofile(lib_shapes.path_mod.."/lib_shapes_set_furniture.lua")
 	dofile(lib_shapes.path_mod .. "/lib_shapes_register_set_furniture.lua")

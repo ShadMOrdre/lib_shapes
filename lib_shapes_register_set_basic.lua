@@ -16,13 +16,13 @@ lib_shapes.register_node = function(node_mat, shape)
 	local new_node_groups = {}
 
 	local shape_def = {}
-	local shape_tiles = {}
+	--local shape_tiles = {}
 	local shape_node_box = {}
 	local shape_selection_box = {}
 	local shape_collision_box = {}
 
 	shape_def = lib_shapes.registered_shapes["shape_" .. shape]
-	shape_tiles = shape_def.tiles
+	--shape_tiles = shape_def.tiles
 	shape_node_box = shape_def.node_box
 	shape_selection_box = shape_def.selection_box
 	shape_collision_box = shape_def.collision_box
@@ -34,7 +34,7 @@ lib_shapes.register_node = function(node_mat, shape)
 
 	new_node_name = node_mod .. ":" .. node_name .. "_" .. shape
 
-	new_node_groups = node_def.groups
+	new_node_groups = table.copy(node_def.groups)
 	--new_node_groups.not_in_creative_inventory = 1
 	new_node_groups.lib_shaped_node = 3
 	
@@ -145,6 +145,7 @@ lib_shapes.register_basic_set = function(node_mat)
 	lib_shapes.register_node(node_mat, "beam_with_support")
 	lib_shapes.register_node(node_mat, "pillar_thick")
 	lib_shapes.register_node(node_mat, "pillar")
+	lib_shapes.register_node(node_mat, "pillar_thin")
 	lib_shapes.register_node(node_mat, "pillar_with_wall_thick")
 	lib_shapes.register_node(node_mat, "pillar_with_wall")
 
@@ -153,6 +154,9 @@ lib_shapes.register_basic_set = function(node_mat)
 	lib_shapes.register_node(node_mat, "stairs_outer")
 	lib_shapes.register_node(node_mat, "slab")
 	lib_shapes.register_node(node_mat, "ceiling")
+
+	lib_shapes.register_node(node_mat, "pane")
+	lib_shapes.register_node(node_mat, "pane_centered")
 
 	lib_shapes.register_node(node_mat, "wall_thick")
 	lib_shapes.register_node(node_mat, "wall")

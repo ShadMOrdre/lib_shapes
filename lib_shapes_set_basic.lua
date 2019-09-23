@@ -165,6 +165,29 @@ lib_shapes.register_shape("pillar", {
 	},
 })
 
+lib_shapes.register_shape("pillar_thin", {
+	description = "Thin Pillar (0.25W)", 
+	shape_type = "basic",
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.125, -0.5, -0.125, 0.125, 0.5, 0.125},
+		}
+	},
+	selection_box = {
+		type = "fixed",
+		fixed = {
+			{-0.125, -0.5, -0.125, 0.125, 0.5, 0.125},
+		},
+	},
+	collision_box = {
+		type = "fixed",
+		fixed = {
+			{-0.125, -0.5, -0.125, 0.125, 0.5, 0.125},
+		},
+	},
+})
+
 lib_shapes.register_shape("pillar_with_wall_thick", {
 	description = "Pillar with Thick Wall (0.75W)", 
 	shape_type = "connected",
@@ -358,6 +381,50 @@ lib_shapes.register_shape("ceiling", {
 	},
 })
 
+lib_shapes.register_shape("pane", {
+	description = "Pane", 
+	shape_type = "basic",
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, -0.5, 0.5, 0.5, -0.375}
+		},
+	},
+	selection_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, -0.5, 0.5, 0.5, -0.375}
+		},
+	},
+	collision_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, -0.5, 0.5, 0.5, -0.375}
+		},
+	},
+})
+lib_shapes.register_shape("pane_centered", {
+	description = "Pane Centered", 
+	shape_type = "basic",
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, -0.0625, 0.5, 0.5, 0.0625}
+		},
+	},
+	selection_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, -0.0625, 0.5, 0.5, 0.0625},
+		},
+	},
+	collision_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, -0.0625, 0.5, 0.5, 0.0625},
+		},
+	},
+})
 
 lib_shapes.register_shape("wall_thick", {
 	description = "Thick Wall (0.75W)", 

@@ -138,7 +138,7 @@
 			end
 		end
 	
-		if default.player_attached[player_name] then
+		if player_api.player_attached[player_name] then
 			pos.y = pos.y - 0.5
 			clicker:setpos(pos)
 			clicker:set_eye_offset({x=0, y=0, z=0}, {x=0, y=0, z=0})
@@ -146,7 +146,7 @@
 			player_api.player_attached[player_name] = false
 			player_api.set_animation(clicker, "stand", 30)
 	
-		elseif not default.player_attached[player_name] and node.param2 <= 3 and not
+		elseif not player_api.player_attached[player_name] and node.param2 <= 3 and not
 				ctrl.sneak and vel.x == 0 and vel.y == 0 and vel.z == 0 then
 	
 			clicker:set_eye_offset({x=0, y=-7, z=2}, {x=0, y=0, z=0})

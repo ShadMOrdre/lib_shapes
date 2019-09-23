@@ -78,6 +78,8 @@ local S = lib_shapes.intllib
 ---------
 -- BEDS
 ---------
+
+	--"(overlay_alpha_chair_front_frame.png^wall_texture^overlay_alpha_chair_front_frame.png^[makealpha:255,126,126)^(overlay_alpha_chair_front_fabric.png^wool_grey.png^overlay_alpha_chair_front_fabric.png^[makealpha:255,126,126)",
 	lib_shapes.register_shape("bed_simple", {
 		description = "Bed - Simple", 
 		shape_type = "basic",
@@ -87,7 +89,7 @@ local S = lib_shapes.intllib
 			"wall_texture",
 			"wall_texture",
 			"wall_texture",
-			"(overlay_alpha_chair_front_frame.png^wall_texture^overlay_alpha_chair_front_frame.png^[makealpha:255,126,126)^(overlay_alpha_chair_front_fabric.png^wool_grey.png^overlay_alpha_chair_front_fabric.png^[makealpha:255,126,126)",
+			"wall_texture",
 		},
 		node_box = {
 			type = "fixed",
