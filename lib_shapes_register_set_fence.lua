@@ -34,7 +34,7 @@ lib_shapes.register_fence_node = function(node_mat, shape)
 	new_node_name = node_mod .. ":" .. node_name .. "_" .. shape
 
 	new_node_groups = node_def.groups
-	--new_node_groups.not_in_creative_inventory = 1
+	new_node_groups.not_in_creative_inventory = 1
 	new_node_groups.lib_shaped_node = 1
 	new_node_groups.lib_fence = 1
 	
